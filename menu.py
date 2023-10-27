@@ -152,7 +152,7 @@ def game_loop(janela, player=None):
     vel = janela.width
     enemy_move_delay = 1
     enemy_shot_delay = 3/dificuldade
-    shot_delay = max(0.2*dificuldade, 1)
+    shot_delay = min(0.3*dificuldade, 1)
     hit_delay = 1
     matrix = EnemyMatrix(3 + dificuldade)
     while not kb.key_pressed("esc"):
@@ -216,7 +216,7 @@ def game_loop(janela, player=None):
 
 #loop do menu de dificuldade
 def settings_loop(janela):
-    global dificuldade, mouz, sets_bg, easy, normal, hard
+    global dificuldade
     while not kb.key_pressed("esc"):
         if mouz.is_over_object(easy):
             easy.set_curr_frame(1)
