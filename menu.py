@@ -140,7 +140,7 @@ def game_loop(janela, player=None):
     global dificuldade
     if not player:
         player = Player()
-    g_bg = Sprite("game_bg.jpg")
+    g_bg = Sprite("assets/game_bg.jpg")
     g_bg.set_position((janela.width-g_bg.width)/2, (janela.height-g_bg.height)/2)
     shots = []
     timer = 0
